@@ -1,0 +1,314 @@
+html {
+    scroll-behavior: smooth;
+}
+/* General Styles */
+:root {
+    --bg-color: #f0f0f0;
+    --text-color: #000;
+    --primary-color: #007bff;
+    --secondary-color: #0056b3;
+    --white: #fff;
+}
+
+[data-theme="dark"] {
+    --bg-color: #121212;
+    --text-color: #fff;
+    --primary-color: #0a84ff;
+    --secondary-color: #0056b3;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+/* Header */
+header {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Dark Mode Toggle */
+#theme-toggle {
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: var(--white);
+    font-size: 18px;
+}
+
+/* General Navigation Styles */
+nav {
+    background-color: var(--secondary-color);
+    padding: 1rem;
+    position: relative;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    gap: 2rem;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    color: var(--white);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: var(--primary-color);
+}
+
+.menu-icon {
+    display: none;
+    cursor: pointer;
+    color: var(--white);
+    font-size: 1.5rem;
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: var(--secondary-color);
+        z-index: 1000;
+        padding: 1rem 0;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    nav ul li {
+        text-align: center;
+        padding: 0.5rem;
+    }
+}
+
+/* Sections with Fade-in Effect */
+section {
+    background-color: var(--white);
+    margin: 40px auto;
+    padding: 20px;
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeIn 1s forwards ease-in-out;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Profile Image */
+img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: var(--white);
+    padding: 10px;
+    margin-top: 20px;
+}
+
+/* Parallax Effect */
+.parallax {
+    background: url('your-image.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+/* Contact Form */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+form input, form textarea {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+form button {
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+form button:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Skills Section: Animated Progress Bars */
+.skill {
+    margin: 20px 0;
+    text-align: left;
+    width: 80%;
+    max-width: 500px;
+    margin: 10px auto;
+}
+.skill p {
+    margin: 0 0 5px 0;
+}
+.progress {
+    background-color: #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    height: 20px;
+    width: 100%;
+    position: relative;
+}
+.progress-bar {
+    background-color: var(--primary-color);
+    height: 100%;
+    width: 0;
+    transition: width 1s ease-in-out;
+}
+
+/* Circular Skill Indicators */
+.circle-skill {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.circle-container {
+    width: 120px;
+    height: 120px;
+    position: relative;
+}
+
+.circle-bg {
+    fill: none;
+    stroke: #ddd;
+    stroke-width: 8;
+}
+
+.circle-progress {
+    fill: none;
+    stroke: var(--primary-color);
+    stroke-width: 8;
+    stroke-dasharray: 314; /* Full circle length */
+    stroke-dashoffset: 314;
+    transition: stroke-dashoffset 1s ease-in-out;
+}
+
+.skill-label {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Dark Mode Styles */
+[data-theme="dark"] {
+    --bg-color: #121212; /* Dark background */
+    --text-color: #ffffff; /* Light text */
+    --primary-color: #0a84ff; /* Adjusted primary color for dark mode */
+    --secondary-color: #0056b3; /* Adjusted secondary color for dark mode */
+    --white: #ffffff; /* White remains white */
+}
+
+/* Ensure sections and other elements adapt to dark mode */
+[data-theme="dark"] section {
+    background-color: #1e1e1e; /* Darker background for sections */
+    color: var(--text-color);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1); /* Adjusted shadow for dark mode */
+}
+
+[data-theme="dark"] footer {
+    background-color: #000000; /* Darker footer */
+    color: var(--text-color);
+}
+
+[data-theme="dark"] nav {
+    background-color: var(--secondary-color); /* Darker nav */
+}
+
+[data-theme="dark"] .progress {
+    background-color: #333; /* Darker progress bar background */
+}
+
+[data-theme="dark"] .progress-bar {
+    background-color: var(--primary-color); /* Progress bar color */
+}
+
+[data-theme="dark"] .circle-bg {
+    stroke: #333; /* Darker circle background */
+}
+
+[data-theme="dark"] .circle-progress {
+    stroke: var(--primary-color); /* Circle progress color */
+}
+.parallax {
+    background: url('D:\portfolio website\IMG_5053.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+  }
+
+.project-card:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+  }
