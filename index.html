@@ -1,116 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Pabitra Bhatta - Aspiring Civil Engineer & Web Developer">
-    <meta name="keywords" content="Civil Engineering, Web Development, AI, Portfolio">
-    <title>Pabitra Bhatta - Resume</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Pabitra Bhatta - Aspiring Civil Engineer & Web Developer">
+  <meta name="keywords" content="Civil Engineering, Web Development, AI, Portfolio">
+  <title>Pabitra Bhatta - Portfolio</title>
+  <link rel="icon" type="image/jpeg" href="images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
+  <!-- Header Section -->
+  <header>
+    <h1>Pabitra Bhatta</h1>
+    <p>Aspiring Civil Engineer & Web Developer | Innovating with AI and Design</p>
+    <select id="language-switcher">
+      <option value="en">English</option>
+      <option value="ne">Nepali</option>
+      <option value="hi">Hindi</option>
+    </select>
+    <button id="theme-toggle" aria-label="Toggle theme">Dark Mode🌙</button>
+  </header>
 
-    <!-- Header Section -->
-    <header>
-        <h1>Pabitra Bhatta</h1>
-        <p>Aspiring Civil Engineer & Web Developer | Innovating with AI and Design</p>
-        <select id="language-switcher">
-            <option value="en">English</option>
-            <option value="ne">Nepali</option>
-            <option value="hi">Hindi</option>
-          </select>
-        <button id="theme-toggle">Dark Mode🌙</button>
-    </header>
+  <!-- Navigation Bar -->
+  <nav>
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    <ul id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="education.html">Education</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
 
-    <!-- Navigation Bar -->
-    <nav>
-        <div class="menu-icon" onclick="toggleMenu()">☰</div>
-        <ul id="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="education.html">Education</a></li>
-            <li><a href="skills.html">Skills</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
+  <!-- Welcome Section -->
+<section class="welcome">
+    <div class="welcome-card animate">
+      <div class="homepage-image">
+        <img src="images/IMG-20240401-WA0005.jpg" alt="Pabitra Bhatta" loading="lazy">
+      </div>
+      <h2>Welcome to My Portfolio</h2>
+      <p class="typewriter">I’m Pabitra Bhatta, <span class="typewriter-text"></span></p>
+      <a href="contact.html" class="cta-button">Get in Touch</a>
+      <p>Scroll down for more!</p>
+    </div>
+  </section>
 
-    <!-- About Section -->
-    <section id="about">
-        <img src="D:\portfolio website\IMG_5053.jpg" alt="Pabitra Bhatta - Civil Engineer and Web Developer">
-        <p>
-            Pabitra Bhatta is an aspiring civil engineer with hands-on experience in structural drawing, estimation, and foundation design. 
-            He has worked on hydropower projects and is also passionate about programming.
-        </p>
-    </section>
+  <!-- Overview Section -->
+<section class="overview">
+    <h2>Explore My Work</h2>
+    <div class="overview-grid">
+      <div class="overview-card animate">
+        <div class="card-icon">
+          <i class="fas fa-user"></i>
+        </div>
+        <h3>About Me</h3>
+        <p>Learn about my journey in civil engineering and web development.</p>
+        <a href="about.html" class="card-link">Discover More</a>
+      </div>
+      <div class="overview-card animate">
+        <div class="card-icon">
+          <i class="fas fa-tools"></i>
+        </div>
+        <h3>Skills</h3>
+        <p>Explore my technical expertise and creative abilities.</p>
+        <a href="skills.html" class="card-link">View Skills</a>
+      </div>
+      <div class="overview-card animate">
+        <div class="card-icon">
+          <i class="fas fa-folder-open"></i>
+        </div>
+        <h3>Projects</h3>
+        <p>Check out my engineering and coding projects.</p>
+        <a href="projects.html" class="card-link">See Projects</a>
+      </div>
+    </div>
+  </section>
 
-    <!-- Education Section -->
-    <section id="education">
-        <h2>Education</h2>
-        <p><strong>High School (Civil Engineering Stream)</strong> <br> GPA: 3.47 (2024 AD)</p>
-        <p>Internship at <strong>Ace Engineering Consultancy & Development Services</strong> (120 hours)</p>
-    </section>
+  <!-- Testimonials Section -->
+  <section class="testimonials">
+    <h2>Testimonials</h2>
+    <div class="testimonial-card animate">
+      <blockquote>"Pabitra’s dedication to engineering and tech is inspiring." - Prof. Jane Smith</blockquote>
+    </div>
+  </section>
 
-    <!-- Skills Section -->
-    <section id="skills">
-        <h2>Skills</h2>
-            <li>Structural Drawing & Estimation</li>
-            <li>AutoCAD & Civil Engineering Software</li>
-            <li>HTML, CSS, JavaScript</li>
-            <li>Microsoft Office, Photoshop, Cybersecurity</li>
-            <li>Fluent in Nepali, Hindi, and English (Duolingo Score: 130)</li>
-    </section>
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Pabitra Bhatta</p>
+  </footer>
 
-    <!-- Projects Section -->
-    <section id="projects">
-        <h2>Projects</h2>
-        <p>Here are some of my programming projects:</p>
-            <li><a href="https://bmentoy.github.io/Aroma-Free-Movies/" target="_blank">Aroma-Free Movies</a></li>
-            <li><a href="https://bmentoy.github.io/bdhss/" target="_blank">BDHSS</a></li>
-    </section>
-    <!--Testiomonials Section-->
-    <section id="testimonials">
-        <h2>Testimonials</h2>
-        <blockquote>"Pabitra is a talented engineer with a strong passion for innovation." - Prof. John Doe</blockquote>
-      </section>
+  <!-- Scroll-to-Top -->
+  <button id="scroll-top" onclick="scrollToTop()" aria-label="Scroll to top">↑</button>
 
-    <!--Blog Section-->
-    <section id="blog">
-        <h2>Blog</h2>
-        <p>Coming soon! Stay tuned for my thoughts on civil engineering, web development, and AI.</p>
-      </section>
-
-    <!-- Contact Section -->
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:pabitrabhattaisonly1@gmail.com">pabitrabhatta1@gmail.com</a></p>
-        <p>Phone: +977 9820736354</p>
-        <div class="social-links">
-          <P>Get connected in social media</P>
-                <li><a href="https://linkedin.com/in/pabitra-bhatta" target="_blank">linkedin<i class="fab fa-linkedin"></i></a></li>
-                <li><a href="https://github.com/bmentoy" target="_blank">GitHub<i class="fab fa-github"></i></a></li>
-          </div>
-    </section>
-
-    <form action="https://formsubmit.co/your-email" method="POST">
-        <input type="email" name="email" placeholder="Enter your email" required>
-        <button type="submit">Subscribe</button>
-      </form>
-
-    <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
-<script>
-  window.botpressWebChat.init({
-    botId: 'your-bot-id',
-    hostUrl: 'https://cdn.botpress.cloud/webchat/v1',
-    messagingUrl: 'https://messaging.botpress.cloud',
-    clientId: 'your-client-id'
-  });
-</script>
-
-    <footer>
-        <p>&copy; 2025 Pabitra Bhatta</p>
-    </footer>
-
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
